@@ -1,0 +1,6 @@
+# O1：正式阶段去掉开头 5 秒，RSS 按 Prometheus 1 秒采样汇总。
+# GC 完整测量窗口的精确增量另由 metrics-start/end.txt 相减得到。
+rss_avg_mb avg_over_time(process_resident_memory_bytes{job="enrolld"}[${window}]) / 1048576
+rss_max_mb max_over_time(process_resident_memory_bytes{job="enrolld"}[${window}]) / 1048576
+gc_cycles_per_s rate(go_gc_cycles_total{job="enrolld"}[${window}])
+gc_cpu_cores rate(go_gc_cpu_seconds_total{job="enrolld"}[${window}])

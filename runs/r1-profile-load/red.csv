@@ -1,0 +1,2 @@
+step,target_rps,server_rps,server_error_rate,server_p99_ms,server_mean_ms,inflight_avg,cpu_cores,cpu_ms_per_req,cpu_wait_threads,sched_wait_p99_ms,pool_in_use_avg,pool_wait_p99_ms,db_query_mean_ms,fsync_per_s,fsync_mean_ms,fsync_p99_ms,batch_mean,goroutines_max,server_slo_good
+1,305,303.618,0,47.9595,14.7843,4.17143,0.172606,0.568499,0.0441458,0.473438,3.11429,37.3066,10.474,0,NaN,NaN,NaN,35,0.999903

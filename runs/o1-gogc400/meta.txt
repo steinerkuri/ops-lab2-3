@@ -1,0 +1,28 @@
+名字: o1-gogc400
+开始: 2026-10-27T11:15:19+08:00
+主机: Linux 6.8.0-147-generic x86_64
+CPU: 4 个逻辑核；General Purpose Processor
+内存: 7556 MiB，available 5704 MiB
+数据目录: data → /dev/vda1（ext4），统计的磁盘: vda
+enrolld: pid 3574979，绑定的核 2,3
+loadgen: 绑定的核 0-1
+接口: /api/report；SLO 阈值 0.05s
+promsteps 变量: route=/api/report slo=0.05 cpus=2|3 disk=vda
+仓库提交: 4918dcc，未提交的改动 13 处
+压测命令: bin/loadgen '-url' 'http://127.0.0.1:8080/api/report?mb=4' '-rates' '100' '-step' '60s'
+enrolld /config:
+{
+  "addr": "127.0.0.1:8080",
+  "work": 200000,
+  "pool": 4,
+  "db_ms": 10,
+  "pool_timeout": "1s",
+  "sync": "each",
+  "sync_interval": "1s",
+  "data": "data",
+  "go_version": "go1.26.9",
+  "gomaxprocs": 2,
+  "gogc": "400",
+  "pid": 3574979,
+  "started": "2026-10-27T11:14:44+08:00"
+}

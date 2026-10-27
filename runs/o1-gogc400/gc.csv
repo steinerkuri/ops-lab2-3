@@ -1,0 +1,2 @@
+step,target_rps,rss_avg_mb,rss_max_mb,gc_cycles_per_s,gc_cpu_cores
+1,100,39.0158,42.7422,17,0.00873403
