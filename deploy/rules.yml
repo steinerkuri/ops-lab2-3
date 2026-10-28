@@ -1,0 +1,21 @@
+groups:
+  - name: lab2-read-slo
+    interval: 5s
+    rules:
+      - alert: ReadSLOBurnRateHigh
+        expr: |
+          (
+            (1 - (
+              (sum(rate(http_request_duration_seconds_bucket{job="enrolld",route="/api/courses/{id}",code="200",le="0.05"}[1m])) or vector(0))
+              /
+              sum(rate(http_requests_total{job="enrolld",route="/api/courses/{id}"}[1m]))
+            )) / 0.01
+          ) > 14.4
+          and
+          sum(rate(http_requests_total{job="enrolld",route="/api/courses/{id}"}[1m])) > 0
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Read SLO error budget burns too fast"
+          description: "Server-side read SLO burn rate is {{ $value }}"

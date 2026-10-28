@@ -1,0 +1,1 @@
+{"status":"success","data":{"alerts":[{"labels":{"alertname":"ReadSLOBurnRateHigh","severity":"warning"},"annotations":{"description":"Server-side read SLO burn rate is 99.70365153298782","summary":"Read SLO error budget burns too fast"},"state":"firing","activeAt":"2026-10-28T02:20:05.803929395Z","value":"9.970365153298782e+01"}]}}
