@@ -457,5 +457,8 @@ Mib/s = txkB/s × 8 ÷ 1024
 
 | GitHub 用户名 | 负责的部分 |
 |---|---|
-| steinerkuri | 任务0 任务1 选做O2 |
+| steinerkuri | 任务 0：环境与基线；任务 1：指标流水线；选做 O2：网络上限 |
+| zhangjikuan534-creator | 任务 2：读路径，连接池与 CPU；选做 O1：内存与 GC |
 | 6waterMMM | 任务 3：写路径与磁盘；选做 O3：告警与看板 |
+| grave-kakaka | 任务 4：第 6 节问题 1、问题 3 |
+| scarlet-mei | 任务 4：第 6 节问题 2、问题 4 |
